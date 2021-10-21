@@ -31,12 +31,12 @@
 </ul>
 
 <script>
-    let a = document.querySelector('ul')
-    let b = document.querySelector('input')
-    let c = document.querySelector('button')
-    function but(){
-        let val = b.value
-        b.value = ''
+    let ul = document.querySelector('ul')
+    let inp = document.querySelector('input')
+    let but = document.querySelector('button')
+    function buttonClick(){
+        let val = inp.value
+        inp.value = ''
         if (val != ''){
             const listItem = document.createElement('li');
             const listText = document.createElement('span');
@@ -45,14 +45,14 @@
             listText.textContent = val;
             listItem.appendChild(listBtn);
             listBtn.textContent = 'Delete';
-            a.appendChild(listItem);
+            ul.appendChild(listItem);
             listBtn.onclick = function(e) {
-                a.removeChild(listItem);
+                ul.removeChild(listItem);
             }
         }
 
 
-        b.focus();
+        inp.focus();
     }
 </script>
 </body>
